@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#carcasaCalculadora {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    height: 40rem;
+    width: 30rem;
+    background-color: antiquewhite;
+}
+
+#pantalla {
+    height: 3rem;
+    width: 25rem;
+    background-color: aqua;
+    margin: 2rem;
+}
+
+button {
+    color: seagreen;
+}
