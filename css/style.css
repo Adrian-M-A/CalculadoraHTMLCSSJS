@@ -12,13 +12,29 @@ body {
     background-color: antiquewhite;
 }
 
-#pantalla {
+#marcoPantalla {
     height: 3rem;
     width: 25rem;
     background-color: aqua;
     margin: 2rem;
+    color: black;
+
+}
+#pantalla {
+    display: flex;
+    justify-self: center;
+    height: 2rem;
+    width: 20rem;
+    background-color: white;
+    color: black;
+    margin: 0.5rem;
 }
 
 button {
-    color: seagreen;
+    color: green;   
+}
+
+p {
+    color: black;
+    background-color: white;
 }
