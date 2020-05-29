@@ -13,6 +13,7 @@ body {
 }
 
 #marcoPantalla {
+    display: flex;
     height: 3rem;
     width: 25rem;
     background-color: aqua;
@@ -24,17 +25,23 @@ body {
     display: flex;
     justify-self: center;
     height: 2rem;
-    width: 20rem;
+    width: 22rem;
     background-color: white;
     color: black;
-    margin: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5;
 }
 
 button {
     color: green;   
 }
 
-p {
-    color: black;
-    background-color: white;
+#chivatoOperador {
+    display: flex;
+    color: white;
+    background-color: blue;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
 }
