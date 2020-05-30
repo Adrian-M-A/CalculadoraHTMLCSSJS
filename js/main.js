@@ -1,4 +1,4 @@
-
+                                    // VARIABLES VINCULADAS AL HTML
 let boton1 = document.getElementById("boton1");
 let boton2 = document.getElementById("boton2");
 let boton3 = document.getElementById("boton3");
@@ -16,7 +16,9 @@ let botonIgual = document.getElementById("botonIgual");
 let botonMultiplicacion = document.getElementById("botonMultiplicacion");
 let botonDivision = document.getElementById("botonDivision");
 let chivatoOperador = document.getElementById("chivatoOperador")
-
+let botonComa = document.getElementById("botonComa");
+let botonModulo = document.getElementById("botonModulo");
+                                    // LISTENER CLICK BOTONES NUMERO PARA AÑADIR EL VALOR DE LOS NUMEROS
 boton1.addEventListener("click", añadeNumero1);
 boton2.addEventListener("click", añadeNumero2);
 boton3.addEventListener("click", añadeNumero3);
@@ -27,7 +29,8 @@ boton7.addEventListener("click", añadeNumero7);
 boton8.addEventListener("click", añadeNumero8);
 boton9.addEventListener("click", añadeNumero9);
 boton0.addEventListener("click", añadeNumero0);
-
+botonComa.addEventListener("click", añadeComa);
+                                    // VALOR BOTONES
 boton1.value = 1;
 boton2.value = 2;
 boton3.value = 3;
@@ -38,10 +41,11 @@ boton7.value = 7;
 boton8.value = 8;
 boton9.value = 9;
 boton0.value = 0;
-
+botonComa.value = ".";
+                                    // CREACION DE VARIABLES PARA OPERAR
 let numero1;
 let numero2;
-
+                                    // FUNCIONES LLAMADAS POR LOS LISTENER DE LOS BOTONES NUMERO
 function añadeNumero1(){
     pantalla.innerText += boton1.value;
 };
@@ -72,7 +76,11 @@ function añadeNumero9(){
 function añadeNumero0(){
     pantalla.innerText += boton0.value;
 };
-
+function añadeComa(){
+    pantalla.innerText += botonComa.value;
+};
+                                        // LISTENER OPERADORES, 
+                                        // CLAVE PARA CONTROLAR EL ORDEN TEMPORAL
 botonSuma.addEventListener("click", var1);
 botonSuma.addEventListener("click", suma);
 botonSuma.addEventListener("click", clear);
@@ -85,10 +93,14 @@ botonMultiplicacion.addEventListener("click", clear);
 botonDivision.addEventListener("click", var1);
 botonDivision.addEventListener("click", division);
 botonDivision.addEventListener("click", clear);
+botonModulo.addEventListener("click", var1);
+botonModulo.addEventListener("click", modulo);
+botonModulo.addEventListener("click", clear);
 botonIgual.addEventListener("click", var2);
 botonIgual.addEventListener("click", igual);
 botonClear.addEventListener("click", clear);
-
+botonClear.addEventListener("click", clearAll);
+                                        // FUNCIONES DE LOS LISTENER OPERADORES
 function var1() {
     numero1 = Number(pantalla.innerText);
 }
@@ -110,13 +122,21 @@ function igual(){
     } else if (chivatoOperador.textContent == "/"){
         chivatoOperador.innerText = "=";
         pantalla.innerText = numero1/numero2;
-    } else {
-        pantalla.innerText = "No es posible hacer esa operación."
+    } else if (chivatoOperador.textContent ="%"){
+        chivatoOperador.innerText = "=";
+        pantalla.innerText = numero1%numero2; 
+    }else {
+        pantalla.innerText = "Error"
     }
 }
 
 function clear() {
     pantalla.innerText = "";
+}
+
+function clearAll() {
+    pantalla.innerText = "";
+    chivatoOperador.innerText = "";
 }
 
 function suma() {
@@ -133,4 +153,8 @@ function multiplicacion() {
 
 function division() {
     chivatoOperador.innerText = "/";
+}
+
+function modulo() {
+    chivatoOperador.innerText = "%";
 }

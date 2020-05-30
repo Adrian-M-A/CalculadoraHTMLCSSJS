@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <div id="carcasaCalculadora">
-        <div id="superior">
+    <div id="carcasaCalculadora">       <!-- CONSTRUIDA DEL FONDO HACIA ADELANTE Y DE ARRIBA HACIA ABAJO -->
+        <div id="superior">                             <!--PANTALLA -->
             <div id="marcoPantalla">
                 <div id="chivatoOperador">
                 </div>
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div id="inferior">
+        <div id="inferior">                 <!--BOTONES, POR FILAS MENOS IGUAL Y MODULO QUE ES COLUMNA-->
             <div id="operadores">
                 <button class="botonOperador" id="botonSuma">+
                 </button>
@@ -28,42 +28,49 @@
                 </button>
             </div>
             <div id="numeros">
-                <div id="numerosSuperior">
-                    <button class="botonNumero" id="boton7">7
+                <div id="numerosCuadrado">
+                    <div id="numerosSuperior">
+                        <button class="botonNumero" id="boton7">7
+                        </button>
+                        <button class="botonNumero" id="boton8">8
+                        </button>
+                        <button class="botonNumero" id="boton9">9
+                        </button>
+                    </div>
+                    <div id="numerosMedio">
+                        <button class="botonNumero" id="boton4">4
+                        </button>
+                        <button class="botonNumero" id="boton5">5
+                        </button>
+                        <button class="botonNumero" id="boton6">6
+                        </button>
+                    </div>
+                    <div id="numerosBajo">
+                        <button class="botonNumero" id="boton1">1
+                        </button>
+                        <button class="botonNumero" id="boton2">2
+                        </button>
+                        <button class="botonNumero" id="boton3">3
+                        </button>
+                    </div>
+                    <div id="ultimaLinea">
+                        <button class="botonNumero" id="boton0">0
+                        </button>
+                        <button class="botonNumero" id="botonClear">C
+                        </button>
+                        <button class="botonOperador" id="botonComa">.
+                        </button>
+                    </div>
+                </div>
+                <div id="igualYModulo">
+                    <button class="botonOperador" id="botonModulo">Mod
                     </button>
-                    <button class="botonNumero" id="boton8">8
-                    </button>
-                    <button class="botonNumero" id="boton9">9
+                    <button class="botonOperador" id="botonIgual">=
                     </button>
                 </div>
-                <div id="numerosMedio">
-                    <button class="botonNumero" id="boton4">4
-                    </button>
-                    <button class="botonNumero" id="boton5">5
-                    </button>
-                    <button class="botonNumero" id="boton6">6
-                    </button>
-                </div>
-                <div id="numerosBajo">
-                    <button class="botonNumero" id="boton1">1
-                    </button>
-                    <button class="botonNumero" id="boton2">2
-                    </button>
-                    <button class="botonNumero" id="boton3">3
-                    </button>
-                </div>
-            </div>
-            <div id="resultado">
-                <button class="botonNumero" id="boton0">0
-                </button>
-                <button class="botonNumero" id="botonClear">C
-                </button>
-                <button class="botonOperador" id="botonIgual">=
-                </button>
             </div>
         </div>
     </div>
-
     <script src="./js/main.js"></script>
 </body>
 </html>
