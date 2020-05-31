@@ -1,5 +1,5 @@
-                        /* CSS ORDENADO POR ORDEN DE CONSTRUCCION, VER HTML */
-                                                /* GENERAL */
+/* CSS ORDENADO POR ORDEN DE CONSTRUCCION, VER HTML */
+/* GENERAL */
 body {
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ button:active {
 *:focus {
     outline: none;
 }
-                                                /* FONDO */
+/* FONDO */
 #carcasaCalculadora {
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ button:active {
     box-shadow: 0.2rem 0.2rem 0.5rem black;
     border: 1px solid black;  
 }
-                                                /* PANTALLA */
+/* PANTALLA */
 #marcoPantalla {
     display: flex;
     height: 6rem;
@@ -74,12 +74,40 @@ button:active {
     margin-left: 0.5rem;
     font-size: 2.5rem;
 }
-                                                 /* BOTONES */
+/* BOTONES */
+#botonesEncendidoApagado{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#botonEncendido{
+    border-radius: 3rem;
+    height: 2rem;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#botonEncendido:active{
+    background-color: green;
+}
+
+#botonApagado{
+    border-radius: 3rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    font-size: medium;
+    font-weight: bold;    
+}
+
+#botonApagado:active{
+    background-color: red;
+}
+
 .botonNumero, .botonOperador {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5.5rem;
+    height: 5rem;
     width: 5.5rem;
     margin: 0.3rem;
     background-color: #f6cd61;
@@ -124,5 +152,5 @@ button:active {
 #botonIgual {
     display: flex;
     align-items: center;
-    height: 17.8rem;
+    height: 16.3rem;
 }

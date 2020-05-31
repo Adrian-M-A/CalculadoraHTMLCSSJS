@@ -6,9 +6,9 @@
     <title>Calculadora</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
-<body>
-    <div id="carcasaCalculadora">       <!-- CONSTRUIDA DEL FONDO HACIA ADELANTE Y DE ARRIBA HACIA ABAJO -->
-        <div id="superior">                             <!--PANTALLA -->
+<body>  <!-- CONSTRUIDA DEL FONDO HACIA ADELANTE Y DE ARRIBA HACIA ABAJO -->
+    <div id="carcasaCalculadora">  
+        <div id="superior">     <!--PANTALLA -->
             <div id="marcoPantalla">
                 <div id="chivatoOperador">
                 </div>
@@ -16,7 +16,14 @@
                 </div>
             </div>
         </div>
-        <div id="inferior">                 <!--BOTONES, POR FILAS MENOS IGUAL Y MODULO QUE ES COLUMNA-->
+        <div id="inferior">     <!--BOTONES POR FILAS, MENOS IGUAL Y MODULO QUE ES COLUMNA-->
+            <div id="botonesEncendidoApagado">
+                <div id="chivatoEncendido"></div>
+                <button id="botonEncendido" class="botonOperador">ON
+                </button>
+                <button id="botonApagado" class="botonOperador">OFF
+                </button>
+            </div>
             <div id="operadores">
                 <button class="botonOperador" id="botonSuma">+
                 </button>
